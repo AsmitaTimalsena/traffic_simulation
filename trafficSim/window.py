@@ -17,7 +17,7 @@ class Window:
     def set_default_config(self):
         """Set default configuration"""
         self.width = 1400
-        self.height = 900
+        self.height = 800
         self.bg_color = (250, 250, 250)
 
         self.fps = 60
@@ -302,7 +302,7 @@ class Window:
 
     def draw_status(self):
         text_fps = self.text_font.render(f't={self.sim.t:.5}', False, (0, 0, 0))
-        text_frc = self.text_font.render(f'n={self.sim.frame_count}', False, (0, 0, 0))
+        # text_frc = self.text_font.render(f'n={self.sim.frame_count}', False, (0, 0, 0))
         vehicles_passed = int(self.sim.vehiclesPassed)
         text_vehicles_passed = self.text_font.render(f'Vehicles Passed={vehicles_passed}', False, (0, 0, 0))
         text_vehicles_present = self.text_font.render(f'Vehicles Present={self.sim.vehiclesPresent}', False, (0, 0, 0))
@@ -313,7 +313,7 @@ class Window:
         #add white rectangle
         self.screen.fill((255, 255, 255), (0, 0, 1400, 40))
         self.screen.blit(text_fps, (0, 0))
-        self.screen.blit(text_frc, (100, 0))
+        # self.screen.blit(text_frc, (100, 0))
         self.screen.blit(text_vehicles_passed, (200, 0))
         self.screen.blit(text_vehicles_present, (400, 0))
         self.screen.blit(text_average_vehicles_per_minute, (630, 0))

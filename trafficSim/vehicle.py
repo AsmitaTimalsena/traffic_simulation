@@ -114,4 +114,3 @@ class Vehicle:
     def unslow(self):
         self.v_max = self._v_max
         
-
